@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-2xl p-4 lg:max-w-4xl">
+      <main className="mx-auto max-w-xl p-4">
         <h1 className="text-2xl font-bold">The all new Recipe App</h1>
         <p>
           Now in Next.js!{' '}

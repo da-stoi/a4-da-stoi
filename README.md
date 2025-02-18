@@ -1,32 +1,18 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/RQyEtg8L)
-Assignment A4 - Web Component Framework
-===
+# Recipe Book
 
-Due: Monday, February 17th, by 11:59 AM.
+- Author: [Daniel Stoiber](https://danielstoiber.com)
+- Published site: [https://a4-da-stoi.stoiber.network](https://a4-da-stoi.stoiber.network)
 
-For this assignment you will re-implement Assignment A3 using React components, a style framework, MongoDB, and either
+This project was a continuation of the continuation of the second assignment, where I created a simple recipe application. The goal of this application was to convert my work from pervious assignments into a full stack application. This application allows users to add, modify, and delete recipes. Users can also search for recipes by name. The application uses MongoDB to store the data between server sessions. The application also uses OAuth authentication via the GitHub strategy. The application is hosted on Vercel (actually this time). I am much more in my element now. It's good to go back to basics every so often. I really take tools like Next.js for granted.
 
-1. the React framework, Express, and Passport GitHub authentication, or
-2. the NextJS framework with NextAuth for authentication
-   Please keep in mind that implementing authentication is challenging and can be frustrating to debug. Please start this
-   assignment early! You may deploy this project on any hosting service (Glitch, DigitalOcean, Heroku etc.).
-   However, make sure to push your final application to your assignment GitHub repo so the course staff can review the code.
+## Added Features
 
-## Deliverables
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-2. Test your project to make sure that when someone goes to your main page on Glitch/Heroku/etc., it displays correctly.
-3. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-4. Push to your assignment repository and modify the README to the specifications below. Be sure to add _all_ project files.
-
-## Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-wilsonwong.glitch.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3.
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+- **A complete UI library:** Shadcn is used in this new version to make the application look more professional.
+- **Auth.js (formerly Next Auth):** Users can now sign in with their GitHub account using Auth.js connected to mongodb.
+- **Quick Search:** Instead of searching on the server side, the entire recipe list is stored and then filtered on the client side.
+- **Public Recipe Viewing:** Anyone is able to view and search for all recipes. Users must be logged in to add a new recipe or modify their own.
+- **Toggle-able Dark Mode:** The previous version did have a system theme based dark mode. If the system was set to light or dark mode, the site would reflect that. On top of that I have added a theme selector.
+- **Sign Out Button:** I have added a sign out button.
+- **Side-by-side Ingredients and Instructions:** Ingredients and instructions are now side-by-side when there is enough space for it.
+- **Responsive Design:** My previous versions also had responsive design, but this new version has much more with different sections hiding or shrinking depending on screen width.
+- **Add Buttons:** The input to add ingredients and instructions now has a button to the right that does the same as pressing enter as a visual aid for those not comfortable with keyboard shortcuts.
