@@ -1,0 +1,17 @@
+# Run Prettier Check
+if ! yarn prettier:check; then
+  echo "Error Checking Prettier. try: yarn format"
+  exit 1
+fi
+
+# Run Lint
+if ! yarn lint; then
+  echo "Error Checking Linting. try: yarn lint --fix"
+  exit 1
+fi
+
+# Run Build
+if ! yarn build; then
+  echo "Error Building: please fix the build issues"
+  exit 1
+fi
