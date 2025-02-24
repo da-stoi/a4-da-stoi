@@ -11,7 +11,7 @@ export async function GET() {
   // Get recipes with user info
   const recipes = (
     await client
-      .db('test')
+      .db('recipeApp')
       .collection('recipes')
       .aggregate([
         {
@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
   };
 
   const { insertedId } = await client
-    .db('test')
+    .db('recipeApp')
     .collection('recipes')
     .insertOne(recipe);
 
@@ -92,7 +92,7 @@ export async function DELETE(req: NextRequest) {
   }
 
   await client
-    .db('test')
+    .db('recipeApp')
     .collection('recipes')
     .deleteOne({ _id: ObjectId.createFromHexString(id) });
 

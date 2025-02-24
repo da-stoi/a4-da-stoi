@@ -4,7 +4,7 @@ import NextAuth from 'next-auth';
 import GitHub from 'next-auth/providers/github';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
-  adapter: MongoDBAdapter(client),
+  adapter: MongoDBAdapter(client, { databaseName: 'recipeApp' }),
   providers: [GitHub],
   callbacks: {
     session({ session, user }) {

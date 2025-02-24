@@ -136,7 +136,7 @@ export default function RecipeList({
               <Avatar className="size-8">
                 <AvatarImage src={recipe.userData?.image || ''} />
                 <AvatarFallback>
-                  {recipe.userData?.name.charAt(0).toUpperCase()}
+                  {recipe.userData?.name?.charAt(0)?.toUpperCase() || 'U'}
                 </AvatarFallback>
               </Avatar>
               <p>Recipe by: {recipe.userData?.name}</p>
